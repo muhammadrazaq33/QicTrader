@@ -2,6 +2,7 @@ import React from "react";
 import Filters from "./Filters";
 import OfferCard from "./offer-card";
 import { SellContent, type Offer } from "./SellContent";
+import SellFilters from "./SellFilters";
 
 type BuySellContentToggoleProps = {
   mode: "buy" | "sell";
@@ -123,20 +124,21 @@ function BuySellContentToggole({ mode }: BuySellContentToggoleProps) {
             />
           </>
         ) : (
-          <div className="text-slate-800">
+          <div className="text-[#333333]">
+            <div className="space-y-4">
+              <SellFilters />
+            </div>
             {/* Page Title */}
-            <h1 className="text-[22px] sm:text-2xl font-semibold tracking-tight mb-4 sm:mb-6">
+            <h1 className="sm:mt-8 mt-6 text-[22px] sm:text-2xl font-semibold tracking-tight mb-4 sm:mb-5">
               Sell Offers
             </h1>
 
             {/* Cards List */}
             <div className="space-y-4 sm:space-y-5 ">
-                {offers.map((offer) => (
-                  <SellContent key={offer.id} offer={offer} />
-                ))}
-              </div>
-
-
+              {offers.map((offer) => (
+                <SellContent key={offer.id} offer={offer} />
+              ))}
+            </div>
           </div>
         )}
       </div>
