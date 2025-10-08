@@ -124,7 +124,7 @@ export function SellContent({ offer }: { offer: Offer }) {
           <button
             type="button"
             className="w-full rounded-xl sm:px-5 px-1 sm:py-3.5 py-3 text-center text-white font-medium
-                       bg-[#0d749a] hover:opacity-70
+                       bg-sky-200 hover:opacity-70
                        transition-colors"
             aria-label="Sell BTC"
           >
